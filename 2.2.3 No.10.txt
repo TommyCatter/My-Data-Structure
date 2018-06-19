@@ -1,3 +1,17 @@
 void Reverse(ElemType A[],int left,int right)
 {
+	int i,temp,mid;
+	mid=right-left+1;
+	for(i=0;i<mid;i++)
+	{
+		temp=A[left+i];
+		A[left+i]=A[right-i];
+		A[right-i]=temp;
+	}
+}
+void Converse(ElemType A[],int n,int p)
+{
+	Reverse(R,0,n-1);
+	Reverse(R,0,p-1);
+	Reverse(R,p,n-1);	
 }
